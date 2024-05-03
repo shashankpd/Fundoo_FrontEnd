@@ -1,0 +1,65 @@
+<form [formGroup]="signupForm" class="signup-outer-content">
+<Div class="signup-main-cnt">
+    <span class="signup-title">Fundo</span>
+    <span class="signup-desc">Create your Fundo Account</span>
+
+    <div class="signup-names-ip">
+        <mat-form-field class="signup-first-last-name"  appearance="outline">
+            <mat-label>First Name*</mat-label>
+            <input matInput formControlName="firstName" placeholder="firstName" />
+            <mat-error *ngIf="signupControl['firstName']?.hasError('required')">FirstName required</mat-error>
+
+        </mat-form-field>
+        
+       
+            <mat-form-field class="signup-first-last-name" appearance="outline">
+                <mat-label>Last Name*</mat-label>
+                <input matInput formControlName="lastName" placeholder="lastName" />
+                <mat-error *ngIf="signupControl['lastName']?.hasError('required')">LastName required</mat-error>
+
+            </mat-form-field>
+    </div>
+
+    
+        <mat-form-field class="signup-username-ip"  appearance="outline">
+            <mat-label>Username*</mat-label>
+            <input matInput formControlName="email" placeholder="Username" />
+            <mat-error *ngIf="signupControl['email']?.hasError('required')">Email required</mat-error>
+            <mat-error *ngIf="signupControl['email']?.hasError('email')">incorrect email format</mat-error>
+        </mat-form-field>
+        <span>You can use letters,numbers & periods</span>
+    
+
+    <div class="signup-password">
+        <mat-form-field class="signup-Password-ip" appearance="outline">
+            <mat-label>Password*</mat-label>
+            <input matInput formControlName="password" placeholder="password" />
+            <mat-error *ngIf="signupControl['password']?.hasError('required')">Password required</mat-error>
+            <mat-error *ngIf="signupControl['password']?.hasError('minlength')">password should contain 6 character</mat-error>
+        </mat-form-field>
+        
+       
+            <mat-form-field class="signup-Password-ip" appearance="outline">
+                <mat-label>Confirm*</mat-label>
+                <input matInput formControlName="confirmPassword" placeholder="confirm" />
+                <mat-error *ngIf="signupControl['confirmPassword']?.hasError('required')">Password required</mat-error>
+
+            </mat-form-field>
+        </div>        
+            <span>Use 8 or more characters with a mix of letters,numbers and symbols</span>
+
+   
+
+    <div class="signup-register">
+        <span><a mat-button href="https://www.google.com/" target="_blank" >sign in instead</a></span>
+                
+            <button mat-raised-button (click)="handleSignup()" color="primary">Register</button>          
+    </div>
+</Div>
+
+    <div class="first-signup-img">
+        <img class="img" src="/assets/FundoSignupImg.PNG" alt="signup image " width="300px" height="300px">
+        <span>One account. All of Fundo working for you</span>
+
+    </div>
+</form>

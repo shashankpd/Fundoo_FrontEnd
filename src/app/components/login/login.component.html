@@ -1,0 +1,32 @@
+<form [formGroup]="loginForm" class="first-main-cnt">
+    <span class="first-login-title">Fundo</span>
+    <span class="first-page">Sign in</span>
+    <span class="first-login-disc">Use your fundoo Account</span>
+
+    <mat-form-field class="first-login-password-ip" appearance="outline">
+        <mat-label>Email or phone*</mat-label>
+        <input matInput formControlName="email" placeholder="Email" />
+        <mat-error *ngIf="loginControl['email']?.hasError('required')">Email required</mat-error>
+        <mat-error *ngIf="loginControl['email']?.hasError('email')">incorrect email format</mat-error>
+    </mat-form-field>
+    
+    <div class="first-password-forgetpassword-cnt">
+        <mat-form-field class="first-login-password-ip" appearance="outline">
+            <mat-label>Password*</mat-label>
+            <input matInput formControlName="password" placeholder="Password" />
+            <mat-error *ngIf="loginControl['password']?.hasError('required')">Password required</mat-error>
+            <mat-error *ngIf="loginControl['password']?.hasError('minlength')">password should contain 6 character</mat-error>
+        </mat-form-field>
+
+      <span class="first-login-link"> <a mat-button href="https://www.google.com/" target="_blank" >Forgot Password</a></span> 
+    </div>
+    <div class="first-create-account-login-btn-cnt">
+        <span class="first-login-link"><a mat-button href="https://www.google.com/" target="_blank" >Create account</a></span>
+
+        <div class="example-button-row">          
+            <button mat-raised-button (click)="handleLogin()" color="primary">Login</button>
+           
+    </div>
+
+</div>
+</form>
