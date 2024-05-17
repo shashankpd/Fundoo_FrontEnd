@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Console } from 'console';
 import { UserService } from 'src/app/services/user-service/user.service';
 
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
     submitted = false;
 
-    constructor(private formBuilder: FormBuilder,private userService:UserService) { }
+    constructor(private formBuilder: FormBuilder,private userService:UserService ,private router:Router) { }
 
     ngOnInit() {
         this.loginForm = this.formBuilder.group({
@@ -31,7 +32,10 @@ export class LoginComponent implements OnInit {
       this.userService
         .loginApi(email, password) // Pass email and password separately
         .subscribe(
-          (res) => console.log(res),
+          (res:any) => {
+            localStorage.setItem("AuthToken",res.data)
+            this.router.navigate(["/dashboard/notes"])
+          },
           (err) => console.log(err)
         );
     }

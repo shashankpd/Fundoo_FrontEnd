@@ -1,0 +1,169 @@
+.container {
+    background-color:white;
+    border: solid 1px silver;
+    color:black;
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 300px;
+    margin: 5px auto;
+    &:hover{
+      .icons{
+        visibility: visible;
+      }
+    }
+  }
+  
+ 
+  //-----------------
+  
+  h2 {
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+  
+  p {
+    margin-top: 16px;
+  }
+  
+  .mat-icon {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: white;
+    color: white;
+    cursor: pointer;
+  }
+
+  .mat-icon:hover{
+
+    background-color:  #313947; 
+  }
+
+  .buttons button:hover {
+    background-color: #2D3748; 
+}
+.icons{
+
+  display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Add gap between buttons */
+    visibility: hidden;
+}
+
+.col-div{
+  width: 350px;
+  height: 50px;
+  border-radius: 200px;
+  
+}
+
+
+.color-palate-cnt
+{
+  width: 220;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+
+.col1 {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+.col2 {
+  background-color: #FAAFA8;
+  border: 1px solid #FAAFA8;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+.col3 {
+  background-color: #F39F76;
+  border: 1px solid #F39F76;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+.col4 {
+  background-color: #FFF8B8;
+  border: 1px solid #FFF8B8;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+
+.col5 {
+  background-color: #E2F6D3;
+  border: 1px solid #E2F6D3;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+.col6 {
+  background-color: #B4DDD3;
+  border: 1px solid #B4DDD3;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+.col7 {
+  background-color: #D4E4ED;
+  border: 1px solid #D4E4ED;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+.col8 {
+  background-color: #AECCDC;
+  border: 1px solid #AECCDC;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+.col9 {
+  background-color: #D3BFDB;
+  border: 1px solid #D3BFDB;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+.col10 {
+  background-color: #F6E2DD;
+  border: 1px solid #F6E2DD;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+.col11 {
+  background-color: #E9E3D4;
+  border: 1px solid #E9E3D4;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+
+.col12 {
+  background-color: #EFEFF1;
+  border: 1px solid #EFEFF1;
+  width: 50px;
+  height: 50px;
+  border-radius: 200px;
+}
+  
+  
+
+  

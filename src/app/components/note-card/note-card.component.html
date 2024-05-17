@@ -1,0 +1,62 @@
+
+
+  <!-- ------------- -->
+<div [style.background-color]="note.colour" class="container" *ngFor="let note of notesData | searchNote : searchString ">
+ 
+    <h2 (click)="handleEditNote(note)">{{note.title}}</h2>
+    <h2 (click)="handleEditNote(note)">{{note.description}}</h2>
+    
+    <div class="icons">
+      <button mat-icon-button aria-label="Reminder">
+        <mat-icon svgIcon="reminder-icon"></mat-icon>
+      </button>
+
+      <button mat-icon-button aria-label="Collaborator">
+        <mat-icon svgIcon="collabrator-icon"></mat-icon>
+      </button>
+
+      <mat-icon
+      svgIcon="color-pallete-icon"
+      [matMenuTriggerFor]="colorMenu"
+      aria-label="Color Palette"
+    ></mat-icon>
+      
+
+      <button mat-icon-button aria-label="Image">
+        <mat-icon svgIcon="image-icon"></mat-icon>
+      </button>
+
+      <button mat-icon-button aria-label="Archive" (click)="handleNoteIconsClick(note, 'archive')">
+        <mat-icon svgIcon="Archive-icon"></mat-icon>
+      </button>
+
+      <button mat-icon-button aria-label="More" [matMenuTriggerFor]="menu">
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="handleNoteIconsClick(note, 'trash')">Delete Note</button>
+          <button mat-menu-item>Add Label</button>
+          <button mat-menu-item>Add Drawing</button>
+        </mat-menu>
+        <mat-icon svgIcon="more-icon"></mat-icon>
+      </button>
+
+    </div>
+
+    <mat-menu #colorMenu="matMenu">
+    <div class="color-palate-cnt">    
+      <div class="col1" matTooltip="Default" (click)=" handleNoteIconsClick(note,'colour','#fffff')"></div>
+      <div class="col2" matTooltip="Coral" (click)=" handleNoteIconsClick(note,'colour','#FAAFA8')" ></div>
+      <div class="col3" matTooltip="Peach" (click)=" handleNoteIconsClick(note,'colour','#F39F76')"></div>
+      <div class="col4" matTooltip="Sand" (click)=" handleNoteIconsClick(note,'colour','#FFF8B8')"></div>
+      <div class="col5" matTooltip="Mint" (click)=" handleNoteIconsClick(note,'colour','#E2F6D3')"></div>
+      <div class="col6" matTooltip="Sage"(click)=" handleNoteIconsClick(note,'colour','#B4DDD3')"></div>
+      <div class="col7" matTooltip="Fog" (click)=" handleNoteIconsClick(note,'colour','#D4E4ED')"></div>
+      <div class="col8" matTooltip="Storm" (click)=" handleNoteIconsClick(note,'colour','#AECCDC')"></div>
+      <div class="col9" matTooltip="Dusk" (click)=" handleNoteIconsClick(note,'colour','#D3BFDB')"></div>
+      <div class="col10" matTooltip="Blossom" (click)=" handleNoteIconsClick(note,'colour','#F6E2DD')"></div>
+      <div class="col11" matTooltip="Clay" (click)=" handleNoteIconsClick(note,'colour','#E9E3D4')"></div>
+      <div class="col12" matTooltip="Chalk" (click)=" handleNoteIconsClick(note,'colour','#EFEFF1')"></div>           
+    </div>
+  </mat-menu>
+  </div>
+  
+  

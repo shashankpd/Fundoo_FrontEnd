@@ -1,0 +1,88 @@
+<nav>
+    <div class="logo-area">
+      <div class="tooltip">
+
+        <button mat-icon-button aria-label="Image">
+          <mat-icon svgIcon="menu-icon" (click)="handleDrawer()"></mat-icon>
+        </button>
+
+        <span class="tooltip-text">Main Menu</span>
+      </div>
+
+      <img
+        class="gb_uc gb_7d"
+        src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png"
+        srcset="
+          https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png 1x,
+          https://www.gstatic.com/images/branding/product/2x/keep_2020q4_48dp.png 2x
+        "
+        alt=""
+        aria-hidden="true"
+        style="width: 40px; height: 40px;"
+      />
+      <span class="logo-text">Keep</span>
+    </div>
+
+    <div class="search-area">
+      <div class="tooltip">
+
+        <button mat-icon-button aria-label="Image">
+          <mat-icon svgIcon="search-icon"></mat-icon>
+        </button>
+
+        <span class="tooltip-text">Search</span>
+      </div>
+      <input type="text"  [(ngModel)]="searchString" (input)="handelSerchString()" placeholder="Search"  />
+    </div>
+    <div class="settings-area">
+      <div class="tooltip">
+
+        <button mat-icon-button aria-label="Image">
+          <mat-icon svgIcon="refresh-icon"></mat-icon>
+        </button>
+
+        <span class="tooltip-text">Refresh</span>
+      </div>
+      <div class="tooltip">
+
+        <button mat-icon-button aria-label="Image">
+          <mat-icon svgIcon="list-view-icon"></mat-icon>
+        </button>
+
+        <span class="tooltip-text">List View</span>
+      </div>
+      <div class="tooltip">
+        
+        <button mat-icon-button aria-label="Image">
+          <mat-icon svgIcon="settings-icon"></mat-icon>
+        </button>
+
+        <span class="tooltip-text">Settings</span>
+      </div>
+    </div>
+    <div class="profile-actions-area">
+      <div class="tooltip">
+
+         <button mat-icon-button aria-label="Image">
+          <mat-icon svgIcon="other-menu-icon"></mat-icon>
+        </button>
+
+        <span class="tooltip-text">Apps</span>
+      </div>
+   
+      <button mat-icon-button aria-label="More" [matMenuTriggerFor]="menu">
+        <mat-menu #menu="matMenu">
+          
+          <button mat-menu-item>Logout</button>
+        </mat-menu>
+        <mat-icon svgIcon="more-icon">
+          <div class="tooltip">
+            <div class="header-profile-cntr"><span>SP</span></div>
+            <span class="tooltip-text">Account</span>
+          </div>
+        </mat-icon>
+      </button>
+
+      
+    </div>
+  </nav>

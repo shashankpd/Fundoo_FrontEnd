@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    
+  }
+  
+  /* HOVER EFFECTS */
+  
+  .material-icons-outlined {
+    padding: 10px;
+  }
+  .hover:hover {
+    background: #424242; /* Darken the hover background */
+    color: white; /* Change the text color to white */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .tooltip {
+    position: relative;
+  }
+  .tooltip-text {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    font-size: 0.78rem;
+    background-color: #212121; /* Darken the tooltip background */
+    color: white;
+    opacity: 0.8;
+    padding: 5px;
+    white-space: nowrap;
+    border-radius: 5px;
+    visibility: hidden;
+    z-index: 1;
+  }
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+  }
+  
+  /* NAVBAR STYLES */
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    border-bottom: 1px solid  silver; /* Darken the border color */
+    padding: 8px;
+   // margin: 0 10px;
+    color: #ccc; /* Adjust the text color */
+    background-color: white; /* Darken the background color */
+   
+  }
+  
+  .logo-area {
+    display: flex;
+    align-items: center;
+  }
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  
+  .search-area {
+    background:  white; /* Darken the search background */
+    width: 692px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    border: solid silver 1px;
+    
+  }
+  .search-area input {
+    border: none;
+    background: white; /* Darken the search background */
+    height: 100%;
+    width: 92%;
+    font-size: 1rem;
+    color: #ccc; /* Adjust the text color */
+    margin-left: 10px;
+  }
+  input:focus {
+    outline: none;
+  }
+  .search-area span {
+    margin-left: 10px;
+  }
+  
+  .settings-area {
+    display: flex;
+  }
+  
+  .profile-actions-area {
+    display: flex;
+  }
+
+  .header-profile-cntr {
+    background-color: rgb(120, 194, 16);
+    padding: 5px;
+    border-radius: 25px;
+    color: #ccc;
+    margin-top: 0px;
+    width:35px;
+  }
+  
+.mat-icon {
+ 
+  border-radius: 2px;
+  background-color: white;
+  color: white;
+  cursor: pointer;
+}
+
+  
